@@ -1,11 +1,12 @@
 header{
     width: 100%;
     position: sticky;
-    z-index: 1000;
+    z-index: 900;
 }
 
 body{
     background-color: black;
+    cursor: url('../../Item Pictures/Icon/Picture/cursor.png'), auto;
 }
 
 .navbar{
@@ -14,10 +15,10 @@ body{
     font-size: 18px;
     background-color: black;
     color: white;
-    border: 1px solid white;
+    border: 1px solid rgb(0, 131, 255);
     border-radius: 10px;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
     position: fixed; /* Set the navbar to fixed position */
     top: 10px; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
@@ -28,12 +29,30 @@ body{
 }
 
 .navbar-brand {
+    margin-left: 50px;
+    margin-right: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand {
+    margin-top: 20px;
+    z-index: 2000;
+    position: fixed;
+    width: fit-content;
+    block-size: fit-content;
+
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    display: block;
-    align-items: center;
-    padding-left: 25px;
-    padding-right: 25px;
 }
 
 .navbar-nav a {
@@ -46,10 +65,12 @@ body{
 .nav-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
     padding-left: 45px;
     padding-right: 45px;
+    white-space: nowrap;
+    flex-wrap: wrap;
 }
 
 .nav-item a{
@@ -67,12 +88,13 @@ body{
     box-shadow: 0 0 20px rgb(0, 131, 255);
 }
 
-.fas{
+.navbar .fas{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding-right: 10px;
+    margin-top: 5px;
     color: white;
 }
 
@@ -126,7 +148,6 @@ footer{
 }
 
 .carousel{
-    margin-top: 70px;
     margin-left: 50px;
     margin-right: 50px;
     height: 100%;
@@ -134,8 +155,22 @@ footer{
 }
 
 .img-banner{
-    border: 0.2px solid white;
+    overflow: auto;
+    width: 100%;
+    border: 0.2px solid rgb(0, 131, 255);
     border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+    transform: scale(.9);
+}
+
+.img-banner:hover::before{
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgb(0, 131, 255);
+}
+
+.img-banner:hover{
+    box-shadow: 0 0 20px rgb(0, 131, 255);
 }
 
 .chat-btn{
@@ -161,10 +196,403 @@ footer{
 }
 
 .chat-btn:hover{
+    transform: rotate(0.5turn);
     color: rgb(0, 131, 255);
     box-shadow: 0 0 20px rgb(0, 131, 255);
     text-shadow: 0 0 20px rgb(0, 131, 255);
 }
 
+.banner-show{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 
+.banner-main{
+    margin-top: 70px;
+}
 
+.main{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.item{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    background: url('../../Item Pictures/Icon/Picture/item-bg.png');
+    white-space: nowrap;
+    text-align: center;
+    border: 2px solid rgb(0, 131, 255);
+}
+
+.item:after { 
+    content: ''; width: 100%; 
+    text-align: center;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card{
+    font-family: 'MuseoModerno';
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+.card:hover::before{
+    transform: scale(1, 1);
+    box-shadow: 0 0 50px rgb(0, 131, 255);
+}
+
+.card:hover{
+    transform: translateX(30px) rotate(15deg);
+    box-shadow: 0 0 20px rgb(0, 131, 255);
+}
+
+.card-text{
+    font-family: 'Itim';
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(0, 131, 255);
+    text-align: center;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: black;
+}
+
+/* .btn-add{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    background: url('../../Item Pictures/Icon/Picture/A0.png');
+    background-color: rgb(0, 131, 255);
+    color: black;
+    font-weight: bold;
+} */
+
+.btn-purple-moon {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: #4e54c8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 250px;
+    font-weight: bold;
+}
+
+.row-title{
+    font-family: 'MuseoModerno';
+    font-size: 30px;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    /* text-shadow: 2px 0 rgb(0, 131, 255), -2px 0 rgb(0, 131, 255), 0 2px rgb(0, 131, 255), 0 -2px rgb(0, 131, 255),
+             1px 1px rgb(0, 131, 255), -1px -1px rgb(0, 131, 255), 1px -1px rgb(0, 131, 255), -1px 1px rgb(0, 131, 255); */
+    text-shadow: 2px 0 white, -2px 0 white, 0 2px white, 0 -2px white,
+            1px 1px white, -1px -1px white, 1px -1px white, -1px 1px white;         
+}
+
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.modal{
+    width: 100%;
+    height: 100%;
+}
+
+.modal h2{
+    font-family: 'MuseoModerno';
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal label{
+    font-family: 'MuseoModerno';
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.modal input{
+    border-radius: 10px;
+    font-family: 'Itim';
+}
+
+.modal a{
+    font-family: 'MuseoModerno';
+}
+
+.modal p{
+    font-family: 'MuseoModerno';
+    font-size: 12px;
+    text-align: center;
+}
+
+.modal i{
+    float: left;
+    color: black;
+}
+
+.modal button{
+    background-color: black;
+    font-family: 'MuseoModerno';
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#btn-gg, #btn-fb{
+    font-family: 'MuseoModerno';
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#btn-gg p, #btn-fb p{
+    font-family: 'MuseoModerno';
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .fas {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+  color: black;
+  justify-content: space-between;
+}
+
+/* align icon */
+.left-addon .fas  { left:  0px;}
+.right-addon .fas { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.fab{
+    font-size: 20px;
+    padding-left: 0px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+    #btn-gg p, #btn-fb p{
+        display: none;
+    }
+
+    .fab{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 45%;
+        margin-bottom: 5px;
+    }
+}
+
+#myChat{
+    overflow: auto;
+    background-color: transparent;
+}
+
+#myChat .modal-dialog{
+    z-index: 920;
+    padding: 16px 20px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+    overflow: hidden;
+}
+
+#myChat .modal-content{
+    top: 100px;
+    overflow-y: auto;
+    overflow: hidden;
+    min-width: 400px;
+    min-height: 300px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-image: url('../../Item Pictures/Icon/Picture/item-bg.png');
+    cursor: pointer;
+    transition: .5s;
+    transform: scale(.9);
+}
+
+#myChat .modal-content::before{
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgb(0, 131, 255);
+}
+
+#myChat .modal-content:hover{
+    box-shadow: 0 0 20px rgb(0, 131, 255);
+}
+
+#myChat hr{
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+}
+
+#myChat .bg-chat{
+    overflow-y: auto;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: black;
+    color: white;
+    box-sizing: content-box;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#myChat h2{
+    font-family: 'MuseoModerno';
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; 
+}
+
+#myChat h5{
+    padding: 10px;
+    font-family: 'MuseoModerno';
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center; 
+}
+
+#myChat p{
+    font-family: 'Itim';
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: center; 
+    padding: 0;
+}
+
+#myChat .media{
+    margin-bottom: 0px;
+    padding-inline: 10px;
+}
+
+#myChat .avatar{
+    margin: 0px;
+    border-radius: 100px;
+    position: relative;
+    border: 2px solid rgb(0, 255, 85);
+}
+
+#myChat textarea{
+    left: 0;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    resize: both;
+    min-height: 40px;
+    line-height: 20px;
+    border-radius: 10px;
+    font-family: 'Itim';
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+#myChat input{
+    border-radius: 10px;
+    margin-top: 50px;
+    position: absolute;
+    min-width: 320px;
+    min-height: 35px;
+    border: none;
+}
+
+#myChat input:hover{
+    border: 2px solid rgb(0, 131, 255);
+    border-radius: 10px;
+}
+
+#myChat .send{
+    margin-top: 50px;
+    position: absolute;
+    cursor: pointer;
+    transition: .5s;
+    transform: scale(.9);
+}
+
+#myChat .send:hover::before{
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgb(0, 131, 255);
+}
+
+#myChat .send:hover{
+    box-shadow: 0 0 20px rgb(0, 131, 255);
+}

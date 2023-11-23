@@ -13,31 +13,40 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <!-- JS -->
+    <script src="../js/script.js"></script>
 </head>
 
 <!-- HEADER -->
 <header>
+  <div class="container d-block d-md-block d-lg-none d-sm-none">
+    <div class="row">
+        <div class="col-12 brand">
+          <a href="#"><img src="../../Item Pictures/Logo/logo_final.jpg" alt="Logo" height="30" class="logo" id="logo-hidden"></a>
+        </div>
+    </div>
+</div>
+
   <nav class="navbar navbar-expand-lg">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <button onclick="hideLogo()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fas fa-bars"></span>
     </button>
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between mx-auto">
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-between">
           <li class="nav-item active">
             <a class="nav-link" href="index.html"><i class="fas fa-home"></i>Trang chủ<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="#"><i class="fas fa-bars"></i>Danh mục sản phẩm <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active">
-            <a class="navbar-brand" href="#"><img src="../../Item Pictures/Logo/logo_final.jpg" alt="Logo" height="30" class="logo"></a>
-          </li>
+          <a class="navbar-brand d-none d-xl-block" href="#"><img src="../../Item Pictures/Logo/logo_final.jpg" alt="Logo" height="30" class="logo"></a>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-headset"></i>Hỗ trợ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-user"></i>Tài khoản</a>
+            <a class="nav-link" id="login" href="#" data-toggle="modal" data-target="#myLogin"><i class="fas fa-user"></i>Tài khoản</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>Giỏ hàng</a>
@@ -51,98 +60,258 @@
 <!-- BODY -->
 <body>
 <div class="btn">
-  <img class="chat-btn" src="../../Item Pictures/Icon/Picture/chat.png" alt="Chat">
+  <img class="chat-btn" src="../../Item Pictures/Icon/Picture/chat.png" alt="Chat" id="btn-chat" data-toggle="modal" data-target="#myChat">
+</div>
+<div class="banner-main">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="../../Item Pictures/Icon/Picture/banner.png" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../../Item Pictures/Icon/Picture/banner.png" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../../Item Pictures/Icon/Picture/banner.png" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span aria-hidden="true"><img src="../../Item Pictures/Icon/Picture/pre.png" alt="Prev" height="35"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span aria-hidden="true"><img src="../../Item Pictures/Icon/Picture/next.png" alt="Next" height="35"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
 
-<div id="carouselExampleIndicators" class="carousel slide banner" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="../../Item Pictures/Icon/Picture/banner.png" alt="First slide">
+<div class="banner-show">
+  <div class="row justify-content-between">
+    <div class="col-lg-6 col-sm-6">
+      <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100 img-banner" src="../../Item Pictures/Icon/Picture/b1.png" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 img-banner" src="../../Item Pictures/Icon/Picture/b1.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 img-banner" src="../../Item Pictures/Icon/Picture/b1.png" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+          <span aria-hidden="true"><img src="../../Item Pictures/Icon/Picture/pre.png" alt="Prev" height="35"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+          <span aria-hidden="true"><img src="../../Item Pictures/Icon/Picture/next.png" alt="Next" height="35"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../../Item Pictures/Icon/Picture/banner.png" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../../Item Pictures/Icon/Picture/banner.png" alt="Third slide">
+    <div class="col-lg-6 col-sm-6">
+      <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100 img-banner" src="../../Item Pictures/Icon/Picture/b2.png" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 img-banner" src="../../Item Pictures/Icon/Picture/b2.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 img-banner" src="../../Item Pictures/Icon/Picture/b2.png" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+          <span aria-hidden="true"><img src="../../Item Pictures/Icon/Picture/pre.png" alt="Prev" height="35"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+          <span aria-hidden="true"><img src="../../Item Pictures/Icon/Picture/next.png" alt="Next" height="35"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span aria-hidden="true"><img src="../../Item Pictures/Icon/Picture/pre.png" alt="Prev" height="35"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span aria-hidden="true"><img src="../../Item Pictures/Icon/Picture/next.png" alt="Next" height="35"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
 
-<div class="container p-4">
-
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
-  <p>
-    AAAAA
-  </p>
+<div class="main">
+  <div class="row justify-content-center item">
+    <div class="col-12">
+      <div class="row justify-content-center">
+        <div class="col-lg-2 col-sm-12">
+          <p class="row-title">
+            FLASHSALE
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="../../Item Pictures/Icon/Picture/mouse.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Chuột Bluetooth</h5>
+            <p class="card-text">250.000 đồng</p>
+            <a href="#" class="btn btn-purple-moon">Thêm</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="../../Item Pictures/Icon/Picture/headphone.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tai nghe Bluetooth</h5>
+            <p class="card-text">350.000 đồng</p>
+            <a href="#" class="btn btn-purple-moon">Thêm</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="../../Item Pictures/Icon/Picture/keyboard.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Bàn phím Bluetooth</h5>
+            <p class="card-text">265.000 đồng</p>
+            <a href="#" class="btn btn-purple-moon">Thêm</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="../../Item Pictures/Icon/Picture/asus.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Laptop ASUS</h5>
+            <p class="card-text">20.000.000 đồng</p>
+            <a href="#" class="btn btn-purple-moon">Thêm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center item">
+    <div class="col-12">
+      <div class="row justify-content-center">
+        <div class="col-lg-2 col-sm-12">
+          <p class="row-title">
+            BÁN CHẠY
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="../../Item Pictures/Icon/Picture/mouse.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Chuột Bluetooth</h5>
+            <p class="card-text">250.000 đồng</p>
+            <a href="#" class="btn btn-purple-moon">Thêm</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="../../Item Pictures/Icon/Picture/headphone.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tai nghe Bluetooth</h5>
+            <p class="card-text">350.000 đồng</p>
+            <a href="#" class="btn btn-purple-moon">Thêm</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="../../Item Pictures/Icon/Picture/keyboard.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Bàn phím Bluetooth</h5>
+            <p class="card-text">265.000 đồng</p>
+            <a href="#" class="btn btn-purple-moon">Thêm</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="../../Item Pictures/Icon/Picture/asus.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Laptop ASUS</h5>
+            <p class="card-text">20.000.000 đồng</p>
+            <a href="#" class="btn btn-purple-moon">Thêm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center item">
+    <div class="col-12">
+      <div class="row justify-content-center">
+        <div class="col-lg-2 col-sm-12">
+          <p class="row-title">
+            MỚI
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="../../Item Pictures/Icon/Picture/mouse.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Chuột Bluetooth</h5>
+            <p class="card-text">250.000 đồng</p>
+            <a href="#" class="btn btn-purple-moon">Thêm</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="../../Item Pictures/Icon/Picture/headphone.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tai nghe Bluetooth</h5>
+            <p class="card-text">350.000 đồng</p>
+            <a href="#" class="btn btn-purple-moon">Thêm</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="../../Item Pictures/Icon/Picture/keyboard.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Bàn phím Bluetooth</h5>
+            <p class="card-text">265.000 đồng</p>
+            <a href="#" class="btn btn-purple-moon">Thêm</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12"> 
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="../../Item Pictures/Icon/Picture/asus.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Laptop ASUS</h5>
+            <p class="card-text">20.000.000 đồng</p>
+            <a href="#" class="btn btn-purple-moon">Thêm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
@@ -230,4 +399,145 @@
   </div>
   <!-- Copyright -->
 </footer>
+
+<!-- LOGIN MODAL -->
+      <!-- Modal content-->
+      <div class="modal fade wx-auto" tabindex="-1" role="dialog" id="myLogin">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body p-0 m-0">
+              <div class="row g-0 align-items-center">
+                <div class="col-6 mx-auto d-none d-md-block">
+                  <img src="../../Item Pictures/Icon/Picture/thumbnail.png" alt="Poster" class="img-fluid " id="leftImg">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="px-4">
+                    <h2>Đăng Nhập</h2>
+                    <label class="control-label" for="phone">SĐT</label>
+                    <div class="inner-addon left-addon">
+                      <i class="fas fa-phone"></i>
+                      <input type="tel" class="form-control" id="phone">
+                    </div>
+                    <label class="control-label" for="password">Mật khẩu</label>
+                    <div class="inner-addon left-addon">
+                      <i class="fas fa-key"></i>
+                      <input type="password" class="form-control" id="password">
+                    </div>
+                    <a type="link" class="text-secondary mt-3" data-bs-dismiss="modal" href="#"><small><b>Quên mật khẩu?</b></small></a>
+                    <button class="btn btn-dark rounded-20 w-100" id="btn-login">Đăng nhập</button>
+                    <p class="text-secondary mt-3">hoặc</p>
+                    <button class="btn rounded-20 w-100" id="btn-gg"><i class="fab fa-google"></i><p>Tiếp tục với Google</p></button>
+                    <button class="btn rounded-20 w-100" id="btn-fb"><i class="fab fa-facebook"></i><p>Tiếp tục với Facebook</p></button>
+                    <div class="d-flex justify-content-center">
+                      <a type="text" class="text-secondary mt-3" data-bs-dismiss="modal"><small>Chưa có tài khoản?</small></a>
+                      <a type="link" class="text-secondary mt-3" data-bs-dismiss="modal" href="#" id="register-link" onclick="return register();"><small><b> Đăng ký ngay</b></small></a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- REGISTER MODAL -->
+      <!-- Modal content-->
+      <div class="modal fade wx-auto" tabindex="-1" role="dialog" id="myRegister">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body p-0 m-0">
+              <div class="row g-0 align-items-center">
+                <div class="col-6 mx-auto d-none d-md-block">
+                  <img src="../../Item Pictures/Icon/Picture/thumbnail.png" alt="Poster" class="img-fluid " id="leftImg">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="px-4">
+                    <h2>Đăng Ký</h2>
+                    <label class="control-label" for="fname">Họ tên</label>
+                    <div class="inner-addon left-addon">
+                      <i class="fas fa-address-card"></i>
+                      <input type="text" class="form-control" id="fname">
+                    </div>
+                    <label class="control-label" for="phone">SĐT</label>
+                    <div class="inner-addon left-addon">
+                      <i class="fas fa-phone"></i>
+                      <input type="tel" class="form-control" id="phone">
+                    </div>
+                    <label class="control-label" for="mail">Email</label>
+                    <div class="inner-addon left-addon">
+                      <i class="fas fa-envelope"></i>
+                      <input type="email" class="form-control" id="mail">
+                    </div>
+                    <label class="control-label" for="password">Mật khẩu</label>
+                    <div class="inner-addon left-addon">
+                      <i class="fas fa-key"></i>
+                      <input type="password" class="form-control" id="password">
+                    </div>
+                    <button class="btn btn-dark rounded-20 w-100" id="btn-login">Đăng ký</button>
+                    <p class="text-secondary mt-3">hoặc</p>
+                    <button class="btn rounded-20 w-100" id="btn-gg"><i class="fab fa-google"></i><p>Tiếp tục với Google</p></button>
+                    <button class="btn rounded-20 w-100" id="btn-fb"><i class="fab fa-facebook"></i><p>Tiếp tục với Facebook</p></button>
+                    <div class="d-flex justify-content-center">
+                      <a type="text" class="text-secondary mt-3" data-bs-dismiss="modal"><small>Đã có tài khoản?</small></a>
+                      <a type="link" class="text-secondary mt-3" data-bs-dismiss="modal" href="#" id="login-link" onclick="return backLogin();"><small><b> Đăng nhập ngay</b></small></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAT MODAL -->
+      <!-- Modal content-->
+      <div class="modal fade wx-auto" tabindex="-1" role="dialog" id="myChat">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body p-0 m-0">
+              <div class="row g-0 align-items-center">
+                <div class="px-4">
+                  <h2>Liên hệ</h2>
+                  <div class="d-flex justify-content-center">
+                    <img src="../../Item Pictures/Icon/Black/zalo.png" alt="Logo" height="25" class="media">
+                    <img src="../../Item Pictures/Icon/Black/facebook.png" alt="Logo" height="25" class="media">
+                    <img src="../../Item Pictures/Icon/Black/email.png" alt="Logo" height="25" class="media">
+                  </div>
+                  <hr>
+                  <div class="bg-chat d-block justify-content-center">
+                    <h5>Trung tâm tư vấn</h5>
+                    <p>15/10/2023</p>
+                    <div class="d-flex justify-content-between">
+                      <div class="col-2">
+                        <img src="../../Item Pictures/Icon/Picture/thu.jpg" alt="Avatar" height="30" class="avatar">
+                      </div>
+                      <div class="col-10">
+                        <textarea>Xin chào! Chúng tôi có thể giúp gì được cho bạn?</textarea> 
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <div class="col-2">
+                        <img src="../../Item Pictures/Icon/Picture/thu.jpg" alt="Avatar" height="30" class="avatar">
+                      </div>
+                      <div class="col-10">
+                        <textarea>Đây là tin nhắn tự động! Vui lòng nhập câu hỏi tư vấn viên sẽ trả lời trong ít phút.</textarea> 
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <div class="col-10">
+                        <input type="text">
+                      </div>
+                      <div class="col-2">
+                        <img src="../../Item Pictures/Icon/Picture/send-btn.png" alt="Send" class="send">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
 </html>
