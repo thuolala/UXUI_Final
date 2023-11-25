@@ -32,7 +32,7 @@
     <button onclick="hideLogo()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fas fa-bars"></span>
     </button>
-    <div class="d-flex justify-content-between mx-auto">
+    <div class="d-flex justify-content-between mx-auto container-fluid">
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-between">
           <li class="nav-item active">
@@ -402,8 +402,8 @@
 
 <!-- LOGIN MODAL -->
       <!-- Modal content-->
-      <div class="modal fade wx-auto" tabindex="-1" role="dialog" id="myLogin">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal fade wx-auto" tabindex="-1" role="dialog" id="myLogin" >
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" >
           <div class="modal-content">
             <div class="modal-body p-0 m-0">
               <div class="row g-0 align-items-center">
@@ -424,7 +424,7 @@
                       <input type="password" class="form-control" id="password">
                     </div>
                     <a type="link" class="text-secondary mt-3" data-bs-dismiss="modal" href="#"><small><b>Quên mật khẩu?</b></small></a>
-                    <button class="btn btn-dark rounded-20 w-100" id="btn-login">Đăng nhập</button>
+                    <button class="btn btn-dark rounded-20 w-100" id="btn-login" onclick="return checkUser();" type="submit">Đăng nhập</button>
                     <p class="text-secondary mt-3">hoặc</p>
                     <button class="btn rounded-20 w-100" id="btn-gg"><i class="fab fa-google"></i><p>Tiếp tục với Google</p></button>
                     <button class="btn rounded-20 w-100" id="btn-fb"><i class="fab fa-facebook"></i><p>Tiếp tục với Facebook</p></button>

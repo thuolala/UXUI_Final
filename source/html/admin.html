@@ -1,0 +1,162 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=MuseoModerno|Itim">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Trang Admin</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+
+    <!-- JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/admin.js"></script>
+</head>
+
+<!-- HEADER -->
+<header>
+  <nav class="navbar navbar-expand-lg" id="adminHeader">
+    <div class="container-fluid d-flex justify-content-between mx-auto">
+        <a class="nav-link head" href="index.html"><i class="fas fa-home"></i>Trang chủ<span class="sr-only">(current)</span></a>
+        <h2>Trang Admin</h2>
+        <a class="nav-link head" id="login" href="#" onclick="return returnHome();"><i class="fas fa-sign-out"></i>Đăng xuất</a>
+    </div>
+  </nav>
+</header>
+
+<!-- BODY -->
+<body>
+    <div class="row justify-content-between">
+        <!-- SIDEBAR -->
+        <div class="col-lg-2 col-md-2 col-sm-2">
+            <div class="container-fluid mx-auto" id="sideCon">
+                <div class="row flex-nowrap">
+                    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 sidebar" >
+                        <div class="d-flex flex-column align-items-center align-items-sm-start px-2 pt-2 text-white">
+                            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                                <li class="nav-item" >
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <img src="../../Item Pictures/Icon/White/dashboard.png" alt="Logo" height="20" class="media"> <span class="ms-1 d-none d-sm-inline">Tổng quát</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <img src="../../Item Pictures/Icon/White/menu.png" alt="Logo" height="20" class="media"> <span class="ms-1 d-none d-sm-inline">Danh mục sản phẩm</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <img src="../../Item Pictures/Icon/White/monitor.png" alt="Logo" height="20" class="media"> <span class="ms-1 d-none d-sm-inline">Quản lý sản phẩm</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <img src="../../Item Pictures/Icon/White/order.png" alt="Logo" height="20" class="media"> <span class="ms-1 d-none d-sm-inline">Quản lý đơn hàng</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <img src="../../Item Pictures/Icon/White/user.png" alt="Logo" height="20" class="media"> <span class="ms-1 d-none d-sm-inline">Quản lý đơn hàng</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <img src="../../Item Pictures/Icon/White/megaphone.png" alt="Logo" height="20" class="media"> <span class="ms-1 d-none d-sm-inline">Quản lý quảng cáo</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <img src="../../Item Pictures/Icon/White/tag.png" alt="Logo" height="20" class="media"> <span class="ms-1 d-none d-sm-inline">Quản lý ưu đãi</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN BODY -->
+        <div class="col-lg-10 col-md-10 col-sm-10">
+            <div class="container-fluid" id="main">
+                <div class="row mx-auto" id="rowFirst">
+                    <div class="col-12">
+                        <h4>TỔNG QUÁT</h4>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 align-items-center mb-10">
+                        <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">0</h5>
+                              <p class="card-text">Tài khoản</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mx-auto align-items-center mb-10">
+                        <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">0</h5>
+                              <p class="card-text">Đơn hàng/tháng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mx-auto align-items-center mb-10">
+                        <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">0</h5>
+                              <p class="card-text">Sản phẩm bán/tháng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mx-auto align-items-center mb-10">
+                        <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">0</h5>
+                              <p class="card-text">Tổng doanh thu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 pieChart">
+                        <div class="row mx-auto justify-content-center" style="max-width:500px; margin-top: 70px;">
+                            <a style="margin-right: 20px; font-weight: lighter;">
+                                <img src="../../Item Pictures/Icon/Picture/po1.png"> Doanh thu tháng trước
+                            </a>
+                            <a style="font-weight: lighter;">
+                                <img src="../../Item Pictures/Icon/Picture/po2.png"> Doanh thu tháng hiện tại
+                            </a>
+                        </div>
+                        <div class="row mx-auto justify-content-center" style="max-width:200px; max-height:200px;">
+                            <canvas id="pieChart" style="width:200px; height:200px;"></canvas>
+                        </div>
+                        <div class="row mx-auto justify-content-center" style="text-align: center; max-width:500px; margin-top: 20px;">
+                            <a >Biểu đồ so sánh giữa 2 tháng</a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mx-auto groupChart" style="width: 1000px;">
+                        <div class="col-6">
+                            <canvas id="barChart" style="width: 400px;"></canvas>
+                        </div>
+                        <div class="col-6">
+                            <canvas id="lineChart" style="width: 400px;"></canvas>
+                        </div>
+                        <div class="col-12">
+                            <div class="row mx-auto justify-content-center" style="text-align: center; max-width:500px; margin-top: 20px;">
+                                <a >Biểu đồ doanh thu 12 tháng</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

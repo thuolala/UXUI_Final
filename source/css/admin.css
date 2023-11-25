@@ -1,0 +1,202 @@
+header{
+    width: 100%;
+    position: sticky;
+    z-index: 900;
+    height: 70px;
+    color: white;
+}
+
+body{
+    background-color: black;
+    cursor: url('../../Item Pictures/Icon/Picture/cursor.png'), auto;
+}
+
+.nav-link{
+    align-items: center;
+    justify-content: space-between;
+    display: inline-flex;
+    color: white;
+}
+
+h2{
+    font-size: 25px;
+    font-weight: bold;
+    background-image: url('../../Item Pictures/Icon/Picture/Num.png');
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar{
+    height: 70px;
+    font-family: 'MuseoModerno';
+    font-weight: bold;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid rgb(0, 131, 255);
+    width: 100%;
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    justify-content: center;
+}
+
+#adminHeader .fas{
+    margin-right: 10px;
+}
+
+.sideCon{
+    left: 0;
+}
+
+.sidebar{
+    white-space: nowrap;
+    font-family: 'MuseoModerno';
+    background-color: black;
+    height: 100%;
+    display:inline-flex;
+    z-index: 900;
+    border-right: 1px solid rgb(0, 131, 255);
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    flex-flow:row nowrap;
+    flex-direction: column;
+}
+
+.nav-item{
+    color: white;
+    width: 100%;
+    margin-bottom: 20px;
+    left: 0;
+}
+
+.nav-item:hover{
+    color: white;
+    width: 100%;
+    /* background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #7a1073 29%,
+        rgb(0, 131, 255) 100%,
+        #ff13ef 70%
+    ); */
+    /* background-color: rgb(0, 131, 255); */
+    background-image: url('../../Item Pictures/Icon/Picture/trans.png');
+    box-shadow: 0 0 50px rgb(0, 131, 255);
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+.media{
+    margin-right: 5px;
+}
+
+.head{
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    transform: scale(.9);
+}
+
+.head:hover::before{
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgb(0, 131, 255);
+}
+
+.head:hover{
+    color: white;
+    box-shadow: 0 0 20px rgb(0, 131, 255);
+}
+
+#main{
+    white-space: nowrap;
+    left: 0;
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+    color: white;
+    /* background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #7a1073 29%,
+        rgb(0, 131, 255) 100%,
+        #13ff56 70%
+    ); */
+    flex-direction: column;
+    flex-flow:row nowrap;
+}
+
+#rowFirst{
+
+}
+
+.card{
+    width: 180px;
+    height: 100px;
+    overflow: hidden;
+    color: black;
+    box-sizing: content-box;
+    display: inline-flex;
+    margin-top: 20px;
+    justify-content: center;
+    font-family: 'MuseoModerno';
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    background-image: url('../../Item Pictures/Icon/Picture/Num.png');
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 20px rgb(0, 131, 255);
+    border-radius: 10px;
+}
+
+.card-title{
+    align-items: center;
+    text-align: center;
+}
+
+.card-text{
+    display: inline-flex;
+    width: 100%;
+    box-sizing: content-box;
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+}
+
+h5{
+    font-weight: bold;
+}
+
+#main h4{
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'MuseoModerno';
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.pieChart{
+    font-family: 'MuseoModerno';
+    font-weight: bold;
+}
+
+.groupChart{
+    margin-top: 50px;
+    font-family: 'MuseoModerno';
+    font-weight: bold;
+}

@@ -37,6 +37,20 @@ function backLogin(){
   }
 }
 
+function checkUser(){
+  var phone = document.getElementById("phone").value;
+  var pass = document.getElementById("password").value;
+
+  // Admin 
+  if(phone == "admin" && pass == "admin"){
+    location.href = "admin.html";
+  }
+  else{
+    location.href = "home.html";
+  }
+  // User
+}
+
 // function chat(){
 //   // // Get the button
 //   // var btn = document.getElementById("btn-chat");
@@ -52,4 +66,8 @@ function backLogin(){
 //     alert( "Load was performed." );
 //   });
 // }
+
+function returnHome(){
+  location.href = "index.html";
+}
 

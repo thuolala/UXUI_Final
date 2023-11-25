@@ -507,6 +507,12 @@ footer{
     margin-top: 5px;
 }
 
+.userAvatar{
+    width: 100%;
+    width: 35px;
+    height: 35px;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 576px) {
     #btn-gg p, #btn-fb p{
         display: none;
@@ -518,6 +524,12 @@ footer{
         align-items: center;
         padding-left: 45%;
         margin-bottom: 5px;
+    }
+
+    .userAvatar{
+        width: 100%;
+        width: 35px;
+        height: 35px;
     }
 }
 
